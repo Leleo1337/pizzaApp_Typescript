@@ -1,3 +1,5 @@
-import { getPizzaDetail } from "./index.ts";
+import { getPizzaDetail } from "./index.js";
 
-getPizzaDetail(2)
+getPizzaDetail(true)
+
+// typeError "Parameter indentifier must be either a string or a number"
