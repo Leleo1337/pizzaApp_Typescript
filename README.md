@@ -1,2 +1,2 @@
 # typescript
- typescript course
+Scrimba typescript course
