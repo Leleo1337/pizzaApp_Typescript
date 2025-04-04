@@ -15,12 +15,11 @@ const users: User[] = [
 
 let nextUserId = 1
 
-function addNewUser(userProps: any): User{
+function addNewUser(userProps: Omit<User, "id">): User{
     const newUser = { 
-        id: nextUserId++, 
-        username: userProps.username, 
-        role: userProps.role
-    }   
+        id: nextUserId++,
+        ...userProps
+    }
     users.push(newUser)
 
     return newUser

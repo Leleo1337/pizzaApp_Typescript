@@ -23,9 +23,10 @@ const orderQueue: Order[] = [];
 let cashInRegister: number = 100
 let nextOrderId: number = 1
 
-function addNewPizza(pizza: Pizza): void{
+function addNewPizza(pizza: Omit<Pizza, "id">): Pizza{
     const newPizza = { id: nextPizzaId++, ...pizza }
     menu.push(newPizza)
+    return newPizza
 }
 
 addNewPizza({name: "Chicken Bacon Ranch", price: 12 })
